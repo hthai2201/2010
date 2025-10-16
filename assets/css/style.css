@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,6 +12,11 @@
   /* rosa claro translúcido */
   backdrop-filter: blur(2.5px) brightness(0.9);
   animation: modalFadeIn 1.2s;
+  /* Safe area support for initial modal */
+  padding-top: var(--safe-area-inset-top);
+  padding-right: var(--safe-area-inset-right);
+  padding-bottom: var(--safe-area-inset-bottom);
+  padding-left: var(--safe-area-inset-left);
 }
 
 @keyframes modalFadeIn {
