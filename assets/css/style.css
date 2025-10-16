@@ -1,0 +1,114 @@
+.modal-inicio {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 300;
+  background: rgba(255, 182, 193, 0.92);
+  /* rosa claro translúcido */
+  backdrop-filter: blur(2.5px) brightness(0.9);
+  animation: modalFadeIn 1.2s;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-contenido {
+  background: linear-gradient(135deg, #fff0fa 60%, #ffb6d5 100%);
+  /* degradado rosa */
+  border-radius: 32px;
+  box-shadow: 0 8px 48px #ff69b4cc, 0 0 0 6px #fff3;
+  /* sombra rosa */
+  padding: 3.5em 2.5em 2.5em 2.5em;
+  text-align: center;
+  min-width: 320px;
+  max-width: 90vw;
+  border: 2.5px solid #ffb6d5;
+  position: relative;
+  animation: modalContentPop 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes modalContentPop {
+  0% {
+    transform: scale(0.7) translateY(40px);
+    opacity: 0;
+  }
+
+  80% {
+    transform: scale(1.05) translateY(-8px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-titulo {
+  font-size: 2.2em;
+  font-family: "Segoe Script", "Comic Sans MS", cursive;
+  color: #e75480;
+  margin-bottom: 0.5em;
+  text-shadow: 0 2px 16px #ffb6d599, 0 0 2px #fff;
+  letter-spacing: 1px;
+}
+
+.modal-texto {
+  font-size: 1.2em;
+  color: #c2185b;
+  margin-bottom: 2em;
+  font-family: "Arial Rounded MT Bold", "Arial", sans-serif;
+  text-shadow: 0 1px 8px #fff8, 0 0 2px #ffb6d544;
+}
+
+.btn-para-ti {
+  padding: 1.2em 2.7em;
+  font-size: 2em;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #e75480 0%, #ffb6d5 100%);
+  color: #fff;
+  border: 2.5px solid #ffb6d5;
+  box-shadow: 0 0 24px #e75480aa, 0 0 48px #ffb6d555;
+  cursor: pointer;
+  font-family: "Arial Rounded MT Bold", "Arial", sans-serif;
+  letter-spacing: 2px;
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-para-ti::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 30px;
+  background: radial-gradient(circle at 60% 40%, #fff3 0%, #e75480 100%);
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.btn-para-ti:hover {
+  background: linear-gradient(90deg, #ffb6d5 0%, #e75480 100%);
+  box-shadow: 0 0 32px #ffb6d5cc, 0 0 64px #e7548088;
+  transform: scale(1.05);
+}
+
+.btn-para-ti:active {
+  transform: scale(0.98);
+  box-shadow: 0 0 16px #e75480aa;
+}

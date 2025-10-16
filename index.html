@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ramo de Tulipanes Azules</title>
+
+  <link rel="stylesheet" href="/assets/css/base.css">
+  </link>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  </link>
+</head>
+
+<body class="not-loaded">
+  <!-- Botón para ti y audio, el resto oculto al inicio -->
+  <div id="pantalla-inicial" class="modal-inicio">
+    <div class="modal-contenido">
+      <div class="modal-titulo">
+        🌷 Chào mừng! 🌷
+      </div>
+      <div class="modal-texto">
+        Nhấn vào nút để khám phá bó hoa tulip hồng đặc biệt của em.
+      </div><button id="btn-para-ti" class="btn-para-ti">Dành cho em</button>
+    </div><audio id="audio-para-ti" src="/assets/audio/audio.mp3"></audio>
+  </div>
+  <div id="contenido-principal" style="display:none;">
+    <div class="night"></div>
+    <div class="particles"></div>
+    <div class="special-text">
+      Dành cho cô gái dễ thương nhất thế giới :)
+    </div>
+    <div id="flowerMessage" class="flower-message"></div>
+    <div class="shooting-stars">
+      <div class="shooting-star"></div>
+      <div class="shooting-star"></div>
+      <div class="shooting-star"></div>
+      <div class="shooting-star"></div>
+      <div class="shooting-star"></div>
+      <div class="shooting-star"></div>
+      <div class="shooting-star"></div>
+      <div class="shooting-star"></div>
+    </div>
+    <div class="flowers">
+      <div class="flower flower--1" onclick="showFlowerMessage(1)">
+        <div class="flower__leafs flower__leafs--1">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__leaf flower__leaf--5"></div>
+          <div class="flower__leaf flower__leaf--6"></div>
+          <div class="flower__center"></div>
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+          <div class="flower__light flower__light--4"></div>
+          <div class="flower__light flower__light--5"></div>
+          <div class="flower__light flower__light--6"></div>
+          <div class="flower__light flower__light--7"></div>
+          <div class="flower__light flower__light--8"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1">
+          </div>
+          <div class="flower__line__leaf flower__line__leaf--2">
+          </div>
+          <div class="flower__line__leaf flower__line__leaf--3">
+          </div>
+          <div class="flower__line__leaf flower__line__leaf--4">
+          </div>
+        </div>
+      </div>
+      <div class="flower flower--2" onclick="showFlowerMessage(2)">
+        <div class="flower__leafs flower__leafs--2">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__leaf flower__leaf--5"></div>
+          <div class="flower__leaf flower__leaf--6"></div>
+          <div class="flower__center"></div>
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+          <div class="flower__light flower__light--4"></div>
+          <div class="flower__light flower__light--5"></div>
+          <div class="flower__light flower__light--6"></div>
+          <div class="flower__light flower__light--7"></div>
+          <div class="flower__light flower__light--8"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1">
+          </div>
+          <div class="flower__line__leaf flower__line__leaf--2">
+          </div>
+          <div class="flower__line__leaf flower__line__leaf--3">
+          </div>
+          <div class="flower__line__leaf flower__line__leaf--4">
+          </div>
+        </div>
+      </div>
+      <div class="flower flower--3" onclick="showFlowerMessage(3)">
+        <div class="flower__leafs flower__leafs--3">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__leaf flower__leaf--5"></div>
+          <div class="flower__leaf flower__leaf--6"></div>
+          <div class="flower__center"></div>
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+          <div class="flower__light flower__light--4"></div>
+          <div class="flower__light flower__light--5"></div>
+          <div class="flower__light flower__light--6"></div>
+          <div class="flower__light flower__light--7"></div>
+          <div class="flower__light flower__light--8"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1">
+          </div>
+          <div class="flower__line__leaf flower__line__leaf--2">
+          </div>
+          <div class="flower__line__leaf flower__line__leaf--3">
+          </div>
+          <div class="flower__line__leaf flower__line__leaf--4">
+          </div>
+        </div>
+      </div>
+      <div class="flower flower--4" onclick="showFlowerMessage(4)">
+        <div class="flower__leafs flower__leafs--4">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__leaf flower__leaf--5"></div>
+          <div class="flower__leaf flower__leaf--6"></div>
+          <div class="flower__center"></div>
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+          <div class="flower__light flower__light--4"></div>
+          <div class="flower__light flower__light--5"></div>
+          <div class="flower__light flower__light--6"></div>
+          <div class="flower__light flower__light--7"></div>
+          <div class="flower__light flower__light--8"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1">
+          </div>
+          <div class="flower__line__leaf flower__line__leaf--2">
+          </div>
+          <div class="flower__line__leaf flower__line__leaf--3">
+          </div>
+          <div class="flower__line__leaf flower__line__leaf--4">
+          </div>
+        </div>
+      </div>
+      <div class="flower flower--5" onclick="showFlowerMessage(5)">
+        <div class="flower__leafs flower__leafs--5">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__leaf flower__leaf--5"></div>
+          <div class="flower__leaf flower__leaf--6"></div>
+          <div class="flower__center"></div>
+          <div class="flower__light flower__light--1"></div>
+          <div class="flower__light flower__light--2"></div>
+          <div class="flower__light flower__light--3"></div>
+          <div class="flower__light flower__light--4"></div>
+          <div class="flower__light flower__light--5"></div>
+          <div class="flower__light flower__light--6"></div>
+          <div class="flower__light flower__light--7"></div>
+          <div class="flower__light flower__light--8"></div>
+        </div>
+        <div class="flower__line">
+          <div class="flower__line__leaf flower__line__leaf--1">
+          </div>
+          <div class="flower__line__leaf flower__line__leaf--2">
+          </div>
+          <div class="flower__line__leaf flower__line__leaf--3">
+          </div>
+          <div class="flower__line__leaf flower__line__leaf--4">
+          </div>
+        </div>
+      </div><!-- Flores extra para el ramo -->
+      <div class="flower flower--6" style="left:20%;transform:rotate(-10deg);z-index:40;"
+        onclick="showFlowerMessage(6)">
+        <div class="flower__leafs flower__leafs--6">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__leaf flower__leaf--5"></div>
+          <div class="flower__leaf flower__leaf--6"></div>
+          <div class="flower__center"></div>
+        </div>
+        <div class="flower__line"></div>
+      </div>
+      <div class="flower flower--7" style="left:80%;transform:rotate(15deg);z-index:40;">
+        <div class="flower__leafs flower__leafs--7">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__leaf flower__leaf--5"></div>
+          <div class="flower__leaf flower__leaf--6"></div>
+          <div class="flower__center"></div>
+        </div>
+        <div class="flower__line"></div>
+      </div>
+      <div class="flower flower--8" style="left:35%;transform:rotate(-25deg);z-index:30;">
+        <div class="flower__leafs flower__leafs--8">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__leaf flower__leaf--5"></div>
+          <div class="flower__leaf flower__leaf--6"></div>
+          <div class="flower__center"></div>
+        </div>
+        <div class="flower__line"></div>
+      </div>
+      <div class="flower flower--9" style="left:65%;transform:rotate(25deg);z-index:30;">
+        <div class="flower__leafs flower__leafs--9">
+          <div class="flower__leaf flower__leaf--1"></div>
+          <div class="flower__leaf flower__leaf--2"></div>
+          <div class="flower__leaf flower__leaf--3"></div>
+          <div class="flower__leaf flower__leaf--4"></div>
+          <div class="flower__leaf flower__leaf--5"></div>
+          <div class="flower__leaf flower__leaf--6"></div>
+          <div class="flower__center"></div>
+        </div>
+        <div class="flower__line"></div>
+      </div>
+    </div>
+    <div class="ramo">
+      <img src="https://github.com/Baque2005/Organizador/blob/master/unnamed%20(1).png?raw=true" alt="Ramo de flores">
+
+      <div class="montes">
+        <svg class="monte monte-izq" viewbox="0 0 120 60" width="120" height="60">
+          <path d="M0,60 Q30,10 60,60 Q90,30 120,60 Z" fill="#4a7c23" opacity="0.85"></path>
+          <path d="M10,60 Q35,25 60,60 Q80,40 110,60 Z" fill="#6b8e23" opacity="0.7"></path>
+        </svg> <svg class="monte monte-der" viewbox="0 0 120 60" width="120" height="60">
+          <path d="M0,60 Q30,30 60,60 Q90,10 120,60 Z" fill="#4a7c23" opacity="0.85"></path>
+          <path d="M10,60 Q40,40 60,60 Q85,25 110,60 Z" fill="#8fcf5a" opacity="0.7"></path>
+        </svg>
+      </div>
+
+    </div>
+    <div class="letter-on-bouquet" onclick="openLetterModal()">
+      <img src="/assets//images/letter.png" alt="Letter" />
+    </div>
+
+    <!-- Floating romantic icons around bouquet -->
+    <div class="romantic-icons">
+      <div class="romantic-icon heart-1" style="left: 20%; bottom: 45vmin; animation-delay: 0s;">💖</div>
+      <div class="romantic-icon heart-2" style="left: 80%; bottom: 50vmin; animation-delay: 1.5s;">💕</div>
+      <div class="romantic-icon sparkle-1" style="left: 15%; bottom: 35vmin; animation-delay: 0.8s;">✨</div>
+      <div class="romantic-icon sparkle-2" style="left: 85%; bottom: 40vmin; animation-delay: 2.2s;">🌟</div>
+      <div class="romantic-icon butterfly-1" style="left: 25%; bottom: 60vmin; animation-delay: 1.2s;">🦋</div>
+      <div class="romantic-icon butterfly-2" style="left: 75%; bottom: 65vmin; animation-delay: 0.5s;">🦋</div>
+      <div class="romantic-icon rose-1" style="left: 10%; bottom: 55vmin; animation-delay: 1.8s;">🌹</div>
+      <div class="romantic-icon rose-2" style="left: 90%; bottom: 30vmin; animation-delay: 0.3s;">🌺</div>
+      <div class="romantic-icon star-1" style="left: 30%; bottom: 70vmin; animation-delay: 2.5s;">⭐</div>
+      <div class="romantic-icon star-2" style="left: 70%; bottom: 25vmin; animation-delay: 1.0s;">💫</div>
+      <div class="romantic-icon kiss-1" style="left: 35%; bottom: 80vmin; animation-delay: 1.7s;">💋</div>
+      <div class="romantic-icon kiss-2" style="left: 65%; bottom: 20vmin; animation-delay: 0.6s;">😘</div>
+    </div>
+
+    <!-- Letter Modal -->
+    <div id="letterModal" class="letter-modal">
+      <div class="letter-content">
+        <button class="close-modal" onclick="closeLetterModal()">&times;</button>
+        <div class="floating-icons">
+          <div class="floating-icon" style="left: 15%; animation-delay: 0s;">💖</div>
+          <div class="floating-icon" style="left: 25%; animation-delay: 1.2s;">🌹</div>
+          <div class="floating-icon" style="left: 40%; animation-delay: 0.5s;">🦋</div>
+          <div class="floating-icon" style="left: 55%; animation-delay: 2.0s;">✨</div>
+          <div class="floating-icon" style="left: 70%; animation-delay: 0.8s;">💕</div>
+          <div class="floating-icon" style="left: 85%; animation-delay: 1.8s;">🌟</div>
+          <div class="floating-icon" style="left: 8%; animation-delay: 2.5s;">🌺</div>
+          <div class="floating-icon" style="left: 92%; animation-delay: 0.3s;">💫</div>
+          <div class="floating-icon" style="left: 32%; animation-delay: 1.5s;">💋</div>
+          <div class="floating-icon" style="left: 65%; animation-delay: 2.2s;">⭐</div>
+        </div>
+        <div class="letter-header">
+          <div class="letter-title">Chúc mừng ngày phụ nữ Việt Nam</div>
+          <div class="letter-date">20-10</div>
+        </div>
+        <div class="letter-greeting">
+          Gửi em 🌷
+        </div>
+        <div class="letter-body">
+          <div class="letter-line" style="animation-delay: 3.5s;">Hôm nay là 20/10 một ngày đặc biệt dành cho những
+            người con gái đặc biệt.</div>
+          <br>
+          <div class="letter-line" style="animation-delay: 4.5s;">Em là một trong số đó dịu dàng, ấm áp và luôn mang lại
+            cảm giác dễ chịu cho những người xung quanh.</div>
+        </div>
+        <div class="letter-signature">
+          Chạm vào bông hoa nhé em.
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <script src="/assets/js/script.js"></script>
+</body>
+
+</html>
