@@ -1,0 +1,148 @@
+/* iOS Performance Optimizations */
+
+/* Disable heavy effects on iOS */
+@supports (-webkit-touch-callout: none) {
+  /* Remove backdrop filters which are expensive on iOS */
+  .modal-inicio {
+    backdrop-filter: none !important;
+    background: rgba(255, 182, 193, 0.95) !important;
+  }
+  
+  .letter-modal {
+    backdrop-filter: none !important;
+  }
+  
+  .flower-message {
+    backdrop-filter: blur(2px) !important;
+  }
+  
+  /* Reduce particle count and effects */
+  .particle {
+    /* Let JavaScript handle sizes */
+    animation-duration: 10s !important;
+    opacity: 0.3 !important;
+  }
+  
+  /* Optimize shooting stars for iOS */
+  .shooting-star {
+    animation-duration: 15s !important;
+    opacity: 0.3 !important;
+  }
+  
+  /* Simplify flower light effects */
+  .flower__light {
+    opacity: 0.4 !important;
+    animation-duration: 10s !important;
+    box-shadow: none !important;
+  }
+  
+  /* Remove expensive background effects */
+  .night {
+    filter: none !important;
+    background-attachment: scroll !important;
+  }
+  
+  /* Optimize transforms for iOS */
+  .flower__leaf {
+    box-shadow: 0 0 0.5vmin #ffb3de !important;
+  }
+  
+  .flower__center {
+    box-shadow: 0 0 0.5vmin #e0b3ff !important;
+  }
+  
+  /* Reduce romantic icon complexity */
+  .romantic-icon {
+    animation-duration: 8s !important;
+    opacity: 0.6 !important;
+  }
+}
+
+/* Optimizations when iOS class is detected */
+.ios-optimized .particle {
+  animation-duration: 12s !important;
+  opacity: 0.2 !important;
+}
+
+.ios-optimized .shooting-star {
+  animation-duration: 18s !important;
+  opacity: 0.25 !important;
+}
+
+.ios-optimized .flower__light {
+  animation-duration: 12s !important;
+  opacity: 0.3 !important;
+}
+
+.ios-optimized .night {
+  background-attachment: scroll !important;
+  filter: none !important;
+}
+
+.ios-optimized .modal-inicio {
+  backdrop-filter: none !important;
+  background: rgba(255, 182, 193, 0.95) !important;
+}
+
+.ios-optimized .letter-modal {
+  backdrop-filter: none !important;
+}
+
+.ios-optimized .flower-message {
+  backdrop-filter: blur(1px) !important;
+}
+
+/* Further optimizations for older iOS devices */
+.reduce-motion .particle {
+  animation: none !important;
+  display: none !important;
+}
+
+.reduce-motion .shooting-star {
+  animation-duration: 25s !important;
+  opacity: 0.15 !important;
+}
+
+.reduce-motion .flower__light {
+  animation: none !important;
+  opacity: 0.2 !important;
+}
+
+.reduce-motion .romantic-icon {
+  animation: none !important;
+  opacity: 0.4 !important;
+}
+
+/* Hardware acceleration hints */
+.ios-optimized .flower {
+  transform: translate3d(0, 0, 0);
+  will-change: auto;
+}
+
+.ios-optimized .particle {
+  transform: translate3d(0, 0, 0);
+  will-change: auto;
+}
+
+/* Touch optimization for iOS */
+.ios-optimized {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+/* Memory management */
+@media (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+  .ios-optimized .particle {
+    /* Let JavaScript handle sizes */
+  }
+  
+  .ios-optimized .flower__light {
+    display: none !important;
+  }
+  
+  .ios-optimized .romantic-icon {
+    display: none !important;
+  }
+}
